@@ -35,7 +35,10 @@ function binAdec() {
     let verdad = 0;
 
     for(let i = 2; i <= 9; i++){
-        if(strBin.includes(i)) verdad++;
+        if(strBin.includes(i)){
+            verdad = true;
+            i = 10;
+        }
     }
 
     if (isNaN(bin) || bin == '' || bin < 0 || verdad > 0){
